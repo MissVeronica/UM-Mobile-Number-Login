@@ -5,11 +5,13 @@ The UM Forms Designer Username or email Login field also accepts a mobile number
 
 The UM Login Form can have a Mobile Number Form text field as the only identification of the User for Login.
 ### Mobile Number Requirements
-May start with + sign.
+May start with + sign and may contain spaces/blanks among the digits.
 
-All characters are digits and no blank/space or other alphabetic characters in the mobile number
+All characters are digits and no other alphabetic characters in the mobile number
 ### Additional UM error messages:
 Mobile number not found
+
+Invalid mobile number
 
 There are more than one user registered with this mobile number
 ### Mobile Number Meta Key
