@@ -17,7 +17,7 @@ Invalid mobile number
 
 There are more than one user registered with this mobile number
 ### Mobile Number Meta Key
-If you are using another meta_key than "mobile_number" replace the default meta_key value in the source.php line ??
+If you are using another meta_key than "mobile_number" replace the default meta_key value in the source.php line 11
 
 ### Installation
 Add the php source code to your child-theme's functions.php file.
