@@ -7,21 +7,19 @@ Two options for the use of Mobile Number Login are available:
 
 2. The UM Login Form can have a Mobile Number Form text field as the only identification of the User for Login.
 ### UM Forms Designer
-Use the Password field like the default setup for Login.
-
 For the first option change the Title/Label etc in current setup.
 
 For the second option replace current Username or Email Login field with your Mobile Number Field.
 
 Set the "mobile_number" meta key value Validation to "Unique Metakey value".
+
+Use the Password field like the default setup for Login.
 ### Mobile Number Requirements
-May start with + sign and may contain spaces/blanks among the digits.
+If mobile number contains blank/spaces and some of these characters <code>+ ( ) - ext</code>  the stored meta value must have exact match for identification. All other characters must be digits and no other alphabetic characters are allowed in the mobile number.
 
-If mobile number contains blank/spaces and <code>+ ( ) - ext</code>  the stored meta value must have exact match for identification.
+Example of a USA phone or mobile number:  +1 (123) 456-7890 ext 9876
 
-All other characters are digits and no other alphabetic characters in the mobile number.
-
-Example of a phone or mobile number:  +1 (123) 456-7890 ext 9876 
+Example of a European phone or mobile number: +49 160-5556-417
 ### Additional UM error messages:
 Mobile number not found
 
