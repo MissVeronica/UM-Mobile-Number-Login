@@ -13,7 +13,7 @@ For the first option change the Title/Label etc in current setup.
 
 For the second option replace current Username or Email Login field with your Mobile Number Field.
 
-Set the mobile_number meta key value Validation to "Unique Metakey value".
+Set the "mobile_number" meta key value Validation to "Unique Metakey value".
 ### Mobile Number Requirements
 May start with + sign and may contain spaces/blanks among the digits.
 
