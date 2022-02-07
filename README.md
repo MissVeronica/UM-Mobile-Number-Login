@@ -6,13 +6,13 @@ Two options for the use of Mobile Number Login are avilable:
 1. The UM Forms Designer Username or email Login field also accepts a Mobile Number for identification of the User.
 
 2. The UM Login Form can have a Mobile Number Form text field as the only identification of the User for Login.
-
+### UM Forms Designer
 Use the Password field like the default setup for Login.
 
 For the first option change the Title/Label etc in current setup.
 
 For the second option replace current Username or Email Login field with your Mobile Number Field.
-### UM Forms Designer
+
 Set the mobile_number meta key value Validation to "Unique Metakey value".
 ### Mobile Number Requirements
 May start with + sign and may contain spaces/blanks among the digits.
