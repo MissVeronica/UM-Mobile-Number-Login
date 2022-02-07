@@ -1,7 +1,7 @@
 ## UM Mobile Number Login
 Ultimate Member additional Login option: Mobile Number.
 ### Mobile Number Login Options
-Two options for the use of Mobile Number Login are avilable:
+Two options for the use of Mobile Number Login are available:
 
 1. The UM Forms Designer Username or email Login field also accepts a Mobile Number for identification of the User.
 
