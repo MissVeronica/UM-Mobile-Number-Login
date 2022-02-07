@@ -17,9 +17,11 @@ Set the "mobile_number" meta key value Validation to "Unique Metakey value".
 ### Mobile Number Requirements
 May start with + sign and may contain spaces/blanks among the digits.
 
-If mobile number contains + sign and/or blank/spaces the stored meta value must have exact match for identification.
+If mobile number contains + sign and/or blank/spaces and ( ) - the stored meta value must have exact match for identification.
 
 All characters are digits and no other alphabetic characters in the mobile number.
+
+Example of a phone or mobile number:  +1 (123) 456-7890 ext 9876 
 ### Additional UM error messages:
 Mobile number not found
 
