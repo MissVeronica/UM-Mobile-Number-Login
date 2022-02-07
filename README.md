@@ -19,7 +19,7 @@ If mobile number contains blank/spaces and some of these characters <code>+ ( ) 
 
 Example of a USA phone or mobile number:  +1 (123) 456-7890 ext 9876
 
-Example of a European phone or mobile number: +49 160-5556-417
+Example of a European phone or mobile number: +49 123-4567-890
 ### Additional UM error messages:
 Mobile number not found
 
