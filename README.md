@@ -17,7 +17,7 @@ Use the Password field like the default setup for Login.
 ### Mobile Number Requirements
 If mobile number contains blank/spaces and some of these characters <code>+ ( ) - ext</code>  the stored meta value must have exact match for identification. All other characters must be digits and no other alphabetic characters are allowed in the mobile number.
 
-Example of a USA phone or mobile number:  +1 (123) 456-7890 ext 9876
+Example of a USA phone or mobile number:  +1 (123) 456-7890
 
 Example of a European phone or mobile number: +49 123-4567-890
 ### Additional UM error messages:
