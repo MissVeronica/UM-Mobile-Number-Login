@@ -8,7 +8,7 @@ add_action( 'um_custom_field_validation_unique_mobile_number', 'um_custom_valida
 
 function my_um_submit_form_errors_hook_login( $args ) {
 
-    // Replace mobile_number with your site's mobile or phone number mea key field to use for User identification
+    // Replace mobile_number with your site's mobile or phone number meta key field to use for User identification
     $meta_key_mobile = 'mobile_number'; 
     $is_email = false;
 
