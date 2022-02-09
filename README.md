@@ -14,18 +14,23 @@ For the second option replace current Username or Email Login field with your Mo
 Set the "mobile_number" meta key value Validation to "Custom Validation" and add the Validation as <code>unique_mobile_number</code>.
 
 Use the Password field like the default setup for Login.
-### Mobile Number Requirements
+### Mobile Number Validation
+Custom UM Field Validation: <code>unique_mobile_number</code> 
+
 If mobile number contains blank/spaces and some of these characters <code>+ ( ) - .</code>  the stored meta value must have exact match for identification. All other characters must be digits and no other alphabetic characters are allowed in the mobile number.
 
 Example of a USA phone or mobile number:  +1 (123) 456-7890
 
 Example of a European phone or mobile number: +49 123-4567-890
 ### Additional UM error messages:
+#### Login
 Mobile number not found
 
 Invalid mobile number
 
 There are more than one user registered with this mobile number
+#### Validation
+There is a user registered with this mobile number
 ### Mobile Number Meta Key
 If you are using another meta_key than "mobile_number" replace the default meta_key value in the source.php line 11
 
