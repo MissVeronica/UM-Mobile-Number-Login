@@ -37,7 +37,7 @@ function my_um_submit_form_errors_hook_login( $args ) {
         $authenticate = $args['username'];
         $field = 'username';
 
-        if ( ! UM()->validation()->is_phone_number( $args['username'] ) ) {
+        if ( UM()->validation()->is_phone_number( $args['username'] ) ) {
             $meta_args  = array(
                 'meta_key'     => $meta_key_mobile,
                 'meta_value'   => $args['username'],
@@ -78,7 +78,7 @@ function my_um_submit_form_errors_hook_login( $args ) {
         $user_name = isset( $data->user_login ) ? $data->user_login : null;
 
     } elseif ( isset( $args[$meta_key_mobile] ) ) {
-        if ( ! UM()->validation()->is_phone_number( $args[$meta_key_mobile] ) ) {
+        if ( UM()->validation()->is_phone_number( $args[$meta_key_mobile] ) ) {
             $meta_args  = array(
                 'meta_key'     => $meta_key_mobile,
                 'meta_value'   => $args[$meta_key_mobile],
