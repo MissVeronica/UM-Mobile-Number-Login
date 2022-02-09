@@ -4,10 +4,11 @@
 
 remove_action( 'um_submit_form_errors_hook_login', 'um_submit_form_errors_hook_login', 10 );
 add_action( 'um_submit_form_errors_hook_login', 'my_um_submit_form_errors_hook_login', 10, 1 );
+add_action( 'um_custom_field_validation_unique_mobile_number', 'um_custom_validate_unique_mobile_number', 30, 3 );
 
 function my_um_submit_form_errors_hook_login( $args ) {
 
-    // Replace mobile_number with your site's mobile or phone number meta key field to use for User identification
+    // Replace mobile_number with your site's mobile or phone number mea key field to use for User identification
     $meta_key_mobile = 'mobile_number'; 
     $is_email = false;
 
@@ -36,7 +37,7 @@ function my_um_submit_form_errors_hook_login( $args ) {
         $authenticate = $args['username'];
         $field = 'username';
 
-        if( ctype_digit( str_replace( array( '+', ' ', '(', ')', '-', '.' ), '', $args['username'] ))) {
+        if ( ! UM()->validation()->is_phone_number( $args['username'] ) ) {
             $meta_args  = array(
                 'meta_key'     => $meta_key_mobile,
                 'meta_value'   => $args['username'],
@@ -77,7 +78,7 @@ function my_um_submit_form_errors_hook_login( $args ) {
         $user_name = isset( $data->user_login ) ? $data->user_login : null;
 
     } elseif ( isset( $args[$meta_key_mobile] ) ) {
-        if( ctype_digit( str_replace( array( '+', ' ', '(', ')', '-', '.' ), '', $args[$meta_key_mobile] ))) {
+        if ( ! UM()->validation()->is_phone_number( $args[$meta_key_mobile] ) ) {
             $meta_args  = array(
                 'meta_key'     => $meta_key_mobile,
                 'meta_value'   => $args[$meta_key_mobile],
@@ -139,5 +140,28 @@ function my_um_submit_form_errors_hook_login( $args ) {
 	if ( UM()->form()->has_error( $field ) || UM()->form()->has_error( $args['user_password'] ) || UM()->form()->count_errors() > 0 ) {
 		do_action( 'wp_login_failed', $user_name, UM()->form()->get_wp_error() );
 	}
+}
+
+function um_custom_validate_unique_mobile_number( $key, $array, $args ) {
+
+    if ( isset( $args[$key] )) {
+            
+        if ( ! UM()->validation()->is_phone_number( $args[$key] ) ) {
+            UM()->form()->add_error( $key, __( 'Please enter a valid phone number', 'ultimate-member' ) );
+        }
+
+        $meta_args  = array(
+            'meta_key'     => $key,
+            'meta_value'   => $args[$key],
+            'meta_compare' => '=' );
+
+        $user_query = new WP_User_Query( $meta_args );
+        $user_mobile = $user_query->get_results();
+
+        if( !empty( $user_mobile )) {
+
+            UM()->form()->add_error( $key, __( 'There is a user registered with this mobile number', 'ultimate-member' ) );
+        }    
+    }
 }
 
