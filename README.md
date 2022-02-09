@@ -1,5 +1,5 @@
 ## UM Mobile Number Login
-Ultimate Member additional Login option: Mobile Number together with a new Custom Validation for Registration and Profile Forms.
+Ultimate Member additional Login option: Mobile Number together with a new Mobile and Phone Number Custom Validation for Registration and Profile Forms.
 ### Mobile Number Login Options
 Two options for the use of Mobile Number Login are available:
 
