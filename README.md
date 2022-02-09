@@ -7,13 +7,14 @@ Two options for the use of Mobile Number Login are available:
 
 2. The UM Login Form can have a Mobile Number Form text field as the only identification of the User for Login.
 ### UM Forms Designer
+#### Login Form
 For the first option change the Title/Label etc in current setup.
 
 For the second option replace current Username or Email Login field with your Mobile Number Field.
 
-Set the "mobile_number" meta key value Validation to "Custom Validation" and add the Validation as <code>unique_mobile_number</code>.
-
 Use the Password field like the default setup for Login.
+#### Registration and Profile Form
+Set the "mobile_number" meta key value Validation to "Custom Validation" and add the Validation as <code>unique_mobile_number</code>.
 ### Mobile Number Validation
 Custom UM Field Validation: <code>unique_mobile_number</code> 
 
@@ -29,7 +30,7 @@ Mobile number not found
 Invalid mobile number
 
 There are more than one user registered with this mobile number
-#### Validation
+#### Registration and Profile Form Validation
 There is a user registered with this mobile number
 ### Mobile Number Meta Key
 If you are using another meta_key than "mobile_number" replace the default meta_key value in the source.php line 11
