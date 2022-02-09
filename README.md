@@ -11,11 +11,11 @@ For the first option change the Title/Label etc in current setup.
 
 For the second option replace current Username or Email Login field with your Mobile Number Field.
 
-Set the "mobile_number" meta key value Validation to "Unique Metakey value" maybe "Phone Number".
+Set the "mobile_number" meta key value Validation to "Custom Validation" and add the Validation as <code>unique_mobile_number</code>.
 
 Use the Password field like the default setup for Login.
 ### Mobile Number Requirements
-If mobile number contains blank/spaces and some of these characters <code>+ ( ) - ext</code>  the stored meta value must have exact match for identification. All other characters must be digits and no other alphabetic characters are allowed in the mobile number.
+If mobile number contains blank/spaces and some of these characters <code>+ ( ) - .</code>  the stored meta value must have exact match for identification. All other characters must be digits and no other alphabetic characters are allowed in the mobile number.
 
 Example of a USA phone or mobile number:  +1 (123) 456-7890
 
