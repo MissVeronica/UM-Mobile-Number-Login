@@ -39,3 +39,8 @@ If you are using another meta_key than "mobile_number" replace the default meta_
 Add the php source code to your child-theme's functions.php file.
 
 or use the "Code Snippets" plugin: https://wordpress.org/plugins/code-snippets/
+
+### Add on
+1. Code snippet for changing input fields of Mobile/Phone Numbers to be type="tel" instead of type="text".
+
+2. Code snippet for making display of Mobile/Phone Numbers clickable by using the link href="tel:"
