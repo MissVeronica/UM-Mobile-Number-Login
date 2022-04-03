@@ -11,5 +11,8 @@ add_filter( "um_phone_number_form_show_field", "um_mobile_number_form_edit_field
             $output = str_replace( 'type="text"', 'dir="ltr" type="tel"', $output );
             $output = str_replace( 'um-field-type_text" ', 'um-field-type_text" dir="ltr" ', $output );
         }
+        if( $set_mode == 'register' ) {
+            $output = preg_replace( '/value="[\s\S]+?"/', 'value=""', $output );
+        }
         return $output;
     }
