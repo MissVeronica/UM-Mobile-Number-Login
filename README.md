@@ -1,11 +1,14 @@
 ## UM Mobile Number Login
 Ultimate Member additional Login option: Mobile Number together with a new Mobile and Phone Number Custom Validation for Registration and Profile Forms.
 ### Mobile Number Login Options
-Two options for the use of Mobile Number Login are available:
+Three options for the use of Mobile Number Login are available:
 
 1. The UM Forms Designer Username or email Login field also accepts a Mobile Number for identification of the User.
 
 2. The UM Login Form can have a Mobile Number Form text field as the only identification of the User for Login.
+
+3. code snippet for mobile_number or change to phone_number in the two $args['mobile_number'] for adding this number to user_login at registration
+
 ### UM Forms Designer
 #### Login Form
 For the first option change the Title/Label etc in current setup.
